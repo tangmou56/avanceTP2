@@ -1,6 +1,7 @@
 #ifndef _LISTE_OBJET_H_
 #define _LISTE_OBJET_H_
 
+#include <liste.h>
 extern unsigned long int liste_objet_cpt  ;
 
 #define LISTE_OBJET_NULL NULL
@@ -26,7 +27,7 @@ typedef struct liste_objet_s
 extern int liste_objet_nb_lire( liste_objet_t * const liste_objet );
 
 /*! Acces a un objets de la liste_objet */
-extern objet_t * liste_objet_elem_lire( liste_objet_t * const liste_objet , const int ind );
+extern liste_t * liste_objet_elem_lire( liste_objet_t * const liste_objet , const int ind );
 
 /*!
  * @}
@@ -48,7 +49,7 @@ extern booleen_t liste_objet_vide( liste_objet_t * const liste_objet) ;
 
 /*! Affectation d'un objet */
 extern err_t liste_objet_elem_ecrire( liste_objet_t * liste_objet,
-                               objet_t * const elem ,
+                               liste_t * const elem ,
                                const int ind ) ;
 
 /*!

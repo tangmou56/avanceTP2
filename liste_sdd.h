@@ -11,6 +11,8 @@
 
 typedef struct liste_s
 {
+  void(*afficher)(void *,char);
+  err_t(*detruire)(void *);
   int nb ;		/* Nombre d'objets dans la liste  */
   objet_t ** liste ;	/* liste  des objets */
 } liste_t ;

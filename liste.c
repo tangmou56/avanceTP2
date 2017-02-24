@@ -118,8 +118,12 @@ liste_t * liste_creer( const int nb )
 	  return((liste_t *)NULL);
 	}
     }
-
-  liste_cpt++ ; 
+    /* affecter les pointeur sur les fonction*/
+    
+    (liste->afficher)=liste_afficher;
+    (liste->detruire)=liste_detruire;
+    
+  liste_cpt++ ;
 
   return(liste);
 }

@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <liste_objet.h>
-
-
 /*
  * VARIABLE LOCALE
  */
@@ -108,7 +106,7 @@ liste_objet_t * liste_objet_creer( const int nb )
     }
     
     liste_objet->nb = nb ;
-    liste_objet->liste_objet = (objet_t**)NULL ;
+    liste_objet->liste_objet = (liste_t**)NULL ;
     if( nb > 0 )
     {
         if( ( liste_objet->liste_objet = malloc( sizeof(liste_t *) * nb ) ) == NULL )
@@ -162,7 +160,7 @@ void liste_objet_afficher( liste_objet_t * const liste_objet ,
     int i;
     for(i=0;i<n;i++){
         if((liste_objet->liste_objet[i])!=NULL){
-            ((liste_objet->liste_objet[i])->afficher)(liste_objet->liste_objet[i]);
+            ((liste_objet->liste_objet[i])->afficher)(liste_objet->liste_objet[i], ' ' );
             printf("%c",separateur);
         }
     } 

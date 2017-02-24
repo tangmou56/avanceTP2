@@ -19,6 +19,6 @@ typedef int err_t ;
 #define ERR_DEB_MEMOIRE -100 
 
 #define ERR_LISTE_IND_ELEM  -200 
-#define ERR_LISTE_OBJET_IND_ELEM
+#define ERR_LISTE_OBJET_IND_ELEM -200
 #endif
 

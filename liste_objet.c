@@ -25,7 +25,7 @@ int liste_objet_nb_lire( liste_objet_t * const liste_objet )
 /* -- Acces individuel a un element */
 
 extern
-objet_t * liste_objet_objet_elem_lire( liste_objet_t * const liste_objet  , const int ind )
+liste_t * liste_objet_elem_lire( liste_objet_t * const liste_objet  , const int ind )
 {
     if( (ind < 0) || (ind > liste_objet_nb_lire(liste_objet)-1 ) )
     {
@@ -75,7 +75,7 @@ booleen_t liste_objet_vide( liste_objet_t * const liste_objet )
 /* -- Acces individuel a un element */
 extern
 err_t liste_objet_elem_ecrire( liste_objet_t * liste_objet ,
-                        objet_t * const elem ,
+                        liste_t * const elem ,
                         const int ind )
 {
     
@@ -84,7 +84,7 @@ err_t liste_objet_elem_ecrire( liste_objet_t * liste_objet ,
     {
         fprintf( stderr , "liste_objet_elem_ecrire: mauvais indice d'element [%d] (devrait etre dans [%d..%d]\n",
                 ind , 0 , liste_objet_nb_lire(liste_objet) );
-        return(ERR_liste_objet_IND_ELEM);
+        return(ERR_LISTE_OBJET_IND_ELEM);
     }
 #endif
     liste_objet->liste_objet[ind] = elem ;
@@ -111,7 +111,7 @@ liste_objet_t * liste_objet_creer( const int nb )
     liste_objet->liste_objet = (objet_t**)NULL ;
     if( nb > 0 )
     {
-        if( ( liste_objet->liste_objet = malloc( sizeof(objet_t *) * nb ) ) == NULL )
+        if( ( liste_objet->liste_objet = malloc( sizeof(liste_t *) * nb ) ) == NULL )
         {
             fprintf( stderr , "liste_objet_creer: debordement memoire lors de la creation d'une liste_objet\n");
             free( liste_objet ) ;

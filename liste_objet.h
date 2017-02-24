@@ -3,11 +3,12 @@
 
 extern unsigned long int liste_objet_cpt  ;
 
-
+#define LISTE_OBJET_NULL NULL
+#define LISTE_OBJET_ID_NULL -1
 typedef struct liste_objet_s
 {
     int nb ;		/* Nombre d'objets dans la liste  */
-    liste_t ** liste ;	/* liste  des objets */
+    liste_t ** liste_objet ;	/* liste  des objets */
 } liste_objet_t ;
 
 

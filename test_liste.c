@@ -31,6 +31,7 @@ main()
   liste_elem_ecrire( liste , (objet_t *)indiv_2 , 3 ) ;
   liste_elem_ecrire( liste , (objet_t *)frac_2  , 4 ) ;
   liste_elem_ecrire( liste , (objet_t *)str_2   , 5 ) ;
+  liste_elem_ecrire( liste , (objet_t *)NULL   , 6 ) ;
   liste_elem_ecrire( liste , (objet_t *)str_3   , 7 ) ;
 
   printf( "Test affichage liste \n" ) ;

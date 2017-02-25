@@ -84,8 +84,6 @@ mystring.h : objet.h
 liste.h : liste_sdd.h
 	touch liste.h
 
-
-
 #
 #
 #

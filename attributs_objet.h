@@ -1,2 +1,2 @@
-void(*afficher)(objet_t *);
-err_t(*detruire)(objet_t *);
+void(*afficher)(void *);
+err_t(*detruire)(void **);

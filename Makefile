@@ -8,7 +8,7 @@ fich_obj_test_individu=test_individu.o individu.o
 fich_obj_test_fraction=test_fraction.o fraction.o
 fich_obj_test_mystring=test_mystring.o mystring.o
 fich_obj_test_liste=test_liste.o liste.o individu.o fraction.o mystring.o
-fich_obj_test_liste_objet=test_liste_objet.o liste_objet.o individu.o fraction.o mystring.o
+fich_obj_test_liste_objet=test_liste_objet.o liste_objet.o liste.o individu.o fraction.o mystring.o
 
 #
 # Tests (executables+objets)

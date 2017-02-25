@@ -20,28 +20,18 @@ main()
     string_t * str_3 = string_creer( "wxcvbn" ) ;
     /*creer liste1*/
     liste_t * liste1 = NULL ;
-    liste1 = liste_creer(8) ;
+    liste1 = liste_creer(2) ;
     liste_elem_ecrire( liste1 , (objet_t *)indiv_1 , 0 ) ;
     liste_elem_ecrire( liste1 , (objet_t *)frac_1  , 1 ) ;
-    liste_elem_ecrire( liste1 , (objet_t *)str_1   , 2 ) ;
-    liste_elem_ecrire( liste1 , (objet_t *)indiv_2 , 3 ) ;
-    liste_elem_ecrire( liste1 , (objet_t *)frac_2  , 4 ) ;
-    liste_elem_ecrire( liste1 , (objet_t *)str_2   , 5 ) ;
-    liste_elem_ecrire( liste1 , (objet_t *)NULL   , 6 ) ;
-    liste_elem_ecrire( liste1 , (objet_t *)str_3   , 7 ) ;
+    /*(liste1->liste[0])->afficher(liste1->liste[0]);*/
     /*creer liste1*/
     /*creer liste2*/
     liste_t * liste2 = NULL ;
-    
-    liste2 = liste_creer(8) ;
-    liste_elem_ecrire( liste1 , (objet_t *)indiv_1 , 0 ) ;
-    liste_elem_ecrire( liste1 , (objet_t *)frac_1  , 1 ) ;
-    liste_elem_ecrire( liste1 , (objet_t *)str_1   , 2 ) ;
-    liste_elem_ecrire( liste1 , (objet_t *)indiv_2 , 3 ) ;
-    liste_elem_ecrire( liste1 , (objet_t *)frac_2  , 4 ) ;
-    liste_elem_ecrire( liste1 , (objet_t *)str_2   , 5 ) ;
-    liste_elem_ecrire( liste1 , (objet_t *)NULL   , 6 ) ;
-    liste_elem_ecrire( liste1 , (objet_t *)str_3   , 7 ) ;
+    liste2= malloc(sizeof(liste_t));
+    liste2->liste = malloc( sizeof(objet_t *) * 2 );
+    liste2->nb=2;
+    liste2->liste[0] = (objet_t *)indiv_2;
+    liste2->liste[1] = (objet_t *)frac_1;
     /*creer liste2*/
     liste_objet_t * liste_objet=NULL;
     
@@ -49,6 +39,12 @@ main()
     liste_objet_elem_ecrire(liste_objet,liste1,0);
     liste_objet_elem_ecrire(liste_objet,liste2,1);
     printf( "Test affichage liste \n" ) ;
+    
+    printf("%i",liste_objet->nb);
+    liste_objet->liste_objet[0]->liste[0]->afficher(liste_objet->liste_objet[0]->liste[0]);
+    liste_objet->liste_objet[1]->liste[0]->afficher(liste_objet->liste_objet[1]->liste[0]);
+    
+    /*liste_objet->liste_objet[0]->afficher(liste_objet->liste_objet[0],' ');
     liste_objet_afficher( liste_objet , ' ' ) ;
     printf( "\n");
     
@@ -66,6 +62,6 @@ main()
     
     printf( "Nombre de liste_t  = %lu\n" , liste_objet_cpt ) ;
     
-    return(0) ;
+    return(0) ; */
 
     }

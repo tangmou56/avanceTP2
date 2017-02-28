@@ -19,14 +19,14 @@ main()
     /*creer liste1*/
     liste_t * liste1 = NULL ;
     liste1 = liste_creer(2) ;
-    liste_elem_ecrire( liste1 , (objet_t *)indiv_1 , 0 ) ;
-    liste_elem_ecrire( liste1 , (objet_t *)frac_1  , 1 ) ;
+    (liste1->liste_elem_ecrire)( liste1 , (objet_t *)indiv_1 , 0 ) ;
+    (liste1->liste_elem_ecrire)( liste1 , (objet_t *)frac_1  , 1 ) ;
     
     /*creer liste2*/
     liste_t * liste2 = NULL ;
     liste2 = liste_creer(2) ;
-    liste_elem_ecrire( liste2 , (objet_t *)indiv_2 , 0 ) ;
-    liste_elem_ecrire( liste2 , (objet_t *)frac_2  , 1 ) ;
+    (liste2->liste_elem_ecrire)( liste2 , (objet_t *)indiv_2 , 0 ) ;
+    (liste2->liste_elem_ecrire)( liste2 , (objet_t *)frac_2  , 1 ) ;
   
 
     liste_objet_t * liste_objet=NULL;

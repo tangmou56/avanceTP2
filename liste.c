@@ -122,7 +122,10 @@ liste_t * liste_creer( const int nb )
     
     (liste->afficher)=liste_afficher;
     (liste->detruire)=liste_detruire;
-    
+    (liste->liste_nb_lire)=liste_nb_lire;
+    (liste->liste_elem_lire)=liste_elem_lire;
+    (liste->liste_vide)=liste_vide;
+    (liste->liste_elem_ecrire)=liste_elem_ecrire;
   liste_cpt++ ;
 
   return(liste);

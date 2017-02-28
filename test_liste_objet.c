@@ -15,9 +15,7 @@ main()
     individu_t * indiv_2 = individu_creer( "David" , "Gilmour" ) ;
     fraction_t * frac_1 = fraction_creer( 3 , 5 ) ;
     fraction_t * frac_2 = fraction_creer( 9 , 13 ) ;
-    string_t * str_1 = string_creer( "azertyuiop" ) ;
-    string_t * str_2 = string_creer( "qsdfghjklm" ) ;
-    string_t * str_3 = string_creer( "wxcvbn" ) ;
+
     /*creer liste1*/
     liste_t * liste1 = NULL ;
     liste1 = liste_creer(2) ;

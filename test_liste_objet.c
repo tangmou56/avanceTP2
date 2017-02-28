@@ -9,7 +9,7 @@ main()
 {
     printf( "Debut du programme des test sur les objets de type liste_objet_t\n" ) ;
     
-    
+     /*creer les objets*/
     err_t noerr = OK;
     individu_t * indiv_1 = individu_creer( "Roger" , "Waters" ) ;
     individu_t * indiv_2 = individu_creer( "David" , "Gilmour" ) ;
@@ -22,17 +22,16 @@ main()
     liste_elem_ecrire( liste1 , (objet_t *)indiv_1 , 0 ) ;
     liste_elem_ecrire( liste1 , (objet_t *)frac_1  , 1 ) ;
     
-    /*creer liste1*/
     /*creer liste2*/
     liste_t * liste2 = NULL ;
     liste2 = liste_creer(2) ;
     liste_elem_ecrire( liste2 , (objet_t *)indiv_2 , 0 ) ;
     liste_elem_ecrire( liste2 , (objet_t *)frac_2  , 1 ) ;
-    /*creer liste2*/
+  
+
     liste_objet_t * liste_objet=NULL;
-    
-    printf( "Test d'existance sur une liste_objet_t existant\n" ) ;
-    ( liste_objet_existe(liste_objet) ? printf("-->OK\n") : printf ("-->KO\n") )  ;
+    printf( "Test d'existance sur une liste_objet_t n'existant\n" ) ;
+    ( liste_objet_existe(liste_objet) ? printf("-->KO\n") : printf ("-->OK\n") )  ;
     
     printf( "Test creation liste_t\n" ) ;
     liste_objet=liste_objet_creer(2);

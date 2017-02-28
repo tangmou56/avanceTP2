@@ -52,5 +52,6 @@ string_t * string_creer( char * const chaine )
     strcpy((string->string),chaine);
     (string->afficher)=string_afficher;
     (string->detruire)=string_detruire;
+	string_cpt++;
   return( string ) ;
 }

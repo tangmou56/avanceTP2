@@ -58,7 +58,7 @@ individu_t * individu_creer( char * const prenom , char * const nom )
    
     (individu->detruire)=individu_detruire;
     
-    
+    individu_cpt++;
     
   return( individu ) ;
 }

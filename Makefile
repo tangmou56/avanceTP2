@@ -9,12 +9,12 @@ fich_obj_test_fraction=test_fraction.o fraction.o
 fich_obj_test_mystring=test_mystring.o mystring.o
 fich_obj_test_liste=test_liste.o liste.o individu.o fraction.o mystring.o
 fich_obj_test_liste_objet=test_liste_objet.o liste_objet.o liste.o individu.o fraction.o mystring.o
-
+fich_obj_test_personne=test_personne.o personne.o individu.o
 #
 # Tests (executables+objets)
 #
 
-BIN = test_individu test_fraction test_mystring test_liste test_liste_objet 
+BIN = test_individu test_fraction test_mystring test_liste test_liste_objet test_personne 
 
 test_individu : $(fich_obj_test_individu) 
 	$(CCLNK) $(CFLAGS) $(LIBMATH) $(fich_obj_test_individu) -o test_individu 
@@ -46,11 +46,16 @@ test_liste_objet : $(fich_obj_test_liste_objet)
 test_liste_objet.o : test_liste_objet.c 
 	$(CCOBJ) $(CFLAGS) $(LIBMATH) test_liste_objet.c -o test_liste_objet.o -I./ 
 
+test_personne : $(fich_obj_test_personne) 
+	$(CCLNK) $(CFLAGS) $(LIBMATH) $(fich_obj_test_personne) -o test_personne 
+
+test_personne.o : test_personne.c 
+	$(CCOBJ) $(CFLAGS) $(LIBMATH) test_personne.c -o test_personne.o -I./ 
 #
 # Modules
 #
 
-OBJ= individu.o fraction.o mystring.o liste.o liste_objet.o
+OBJ= individu.o fraction.o mystring.o liste.o liste_objet.o personne.o
 
 individu.o : individu.c individu.h
 	$(CCOBJ) $(CFLAGS) $(LIBMATH) individu.c -o individu.o -I./
@@ -67,6 +72,8 @@ liste.o : liste.c liste.h
 liste_objet.o : liste_objet.c liste_objet.h 
 	$(CCOBJ) $(CFLAGS) $(LIBMATH) liste_objet.c -o liste_objet.o -I./
 
+personne.o : personne.c personne.h 
+	$(CCOBJ) $(CFLAGS) $(LIBMATH) personne.c -o personne.o -I./
 
 #
 # Headers 
@@ -84,6 +91,8 @@ mystring.h : objet.h
 liste.h : liste_sdd.h
 	touch liste.h
 
+personne.h : objet.h individu.h
+	touch personne.h
 #
 #
 #
@@ -97,7 +106,7 @@ clean :
 	- rm test_mystring
 	- rm test_liste
 	- rm test_liste_objet
-
+	- rm test_personne
 
 tests : 
 	./test_individu
@@ -105,3 +114,4 @@ tests :
 	./test_mystring
 	./test_liste
 	./test_liste_objet
+	./test_personne

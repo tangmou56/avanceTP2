@@ -25,7 +25,7 @@ booleen_t personne_existe( personne_t * const personne )
 static
 err_t personne_detruire( personne_t ** personne )
 {
-    personne->individu->detruire(&(personne->individu));
+    (((*personne)->individu)->detruire)(&((*personne)->individu));
     free(*personne);
     *personne=NULL;
     return(OK) ;
@@ -53,6 +53,6 @@ personne_t * personne_creer( char * const prenom , char * const nom )
     (personne->afficher)=personne_afficher;
     (personne->detruire)=personne_detruire;
     
-
+	personne_cpt++;
     return( personne ) ;
 }

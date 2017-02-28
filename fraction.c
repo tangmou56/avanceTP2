@@ -53,6 +53,6 @@ fraction_t * fraction_creer( const int numerateur , const int denominateur )
     (fraction->denominateur)=denominateur;
     (fraction->afficher)=fraction_afficher;
     (fraction->detruire)=fraction_detruire;
-
+	fraction_cpt++;
   return( fraction ) ;
 }
